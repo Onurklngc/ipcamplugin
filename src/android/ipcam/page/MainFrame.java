@@ -268,6 +268,7 @@ public class MainFrame extends FrameLayout
 				doConnect(mMode);
 			} else if (nReturn == mSrvAPI.LIFE_ERR_SUCCESS) {
 				if (nCustomID == LIFE_GET_PNV_INFO) {
+					startRTSP();
 					if (isDebug) Log.i(TAG, "GET INFO SUCCESS");
 					DataParser.parsing_pnv_listall_info(new String(bpData, 0, nDataSize), mHandler);
 				} else if (nCustomID == LIFE_SET_SMOOTH || nCustomID == LIFE_SET_SD || nCustomID == LIFE_SET_HD) {
