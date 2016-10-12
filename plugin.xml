@@ -76,6 +76,7 @@
 		<source-file src="src/android/libs/armeabi/libffmpeg.so" target-dir="libs/armeabi" />
 		<source-file src="src/android/libs/arm64-v8a/libffmpeg.so" target-dir="libs/arm64-v8a" />
 		<source-file src="src/android/libs/armeabi/libLifeAPI.so" target-dir="libs/armeabi" />
+				<source-file src="src/android/libs/arm64-v8a/libLifeAPI.so" target-dir="libs/arm64-v8a" />
 		<source-file src="src/android/res/layout/main_activity.xml" target-dir="res/layout"/>
 		<source-file src="src/android/res/layout/main_frame.xml" target-dir="res/layout"/>
 	</platform>
