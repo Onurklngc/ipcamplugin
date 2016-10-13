@@ -64,7 +64,6 @@ public class MainActivity extends Activity {
 
 		@Override
 		public void onServiceDisconnected(ComponentName name) {
-			cordova.getActivity().finish();
 			mSrvAPI = null;
 		}
 	};
