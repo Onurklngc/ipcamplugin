@@ -56,9 +56,6 @@ public class MainActivity extends Activity {
 		@Override
 		public void onServiceConnected(ComponentName name, IBinder service) {
 			mSrvAPI = ((LifeService.loadBinder) service).getService();
-
-            mSrvAPI.setCordovaActivity(cordova.getActivity());
-			
 			addFrame();
 		}
 
