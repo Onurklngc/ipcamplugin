@@ -44,7 +44,11 @@ public class MainActivity extends Activity {
 
 		mLayRoot = (FrameLayout)findViewById(R.id.lay_root);
 	}
-
+	
+	@Override
+	public void onBackPressed() {
+	}
+	
 	@Override
 	protected void onResume() {
 		super.onResume();
