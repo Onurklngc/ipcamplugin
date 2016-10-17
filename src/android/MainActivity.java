@@ -38,7 +38,7 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main_activity);
 		extras = getIntent().getExtras();		
-		Log.e("url", extras.getString("macID"));
+		//Log.e("url", extras.getString("macID"));
 		// Bind LifeService
 		Intent aIntent = new Intent(LifeService.class.getName());
 		aIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -50,8 +50,8 @@ public class MainActivity extends Activity {
 	
 	@Override
 	public void onBackPressed() {
-		Intent intent = new Intent();
-		setResult(RESULT_OK, intent);
+		Intent intent2 = new Intent();
+		setResult(RESULT_OK, intent2);
 		finish();
 	}
 	
