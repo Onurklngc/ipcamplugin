@@ -62,7 +62,9 @@ public class Vitamio extends CordovaPlugin {
 		cordova.getActivity().runOnUiThread(new Runnable() {
 			public void run() {
 				Intent i = new Intent("ACTION_PLAY_VIDEO");
-				i.putString("macID", url);
+				Bundle extras = new Bundle();
+				extras.putString("macID", url);
+				i.putExtras(extras);
 				cordovaObj.startActivityForResult(plugin,i, 0);
 			}
 		});
