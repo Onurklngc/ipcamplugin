@@ -36,7 +36,8 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main_activity);
-
+		extras = getIntent().getExtras();		
+		Log.e("url", extras.getString("macID"));
 		// Bind LifeService
 		Intent aIntent = new Intent(LifeService.class.getName());
 		aIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
