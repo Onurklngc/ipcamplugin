@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:text="@string/log_out"
-			android:visibility="visible"
+			android:visibility="gone"
             android:textSize="16sp"/>
 
         <Button
