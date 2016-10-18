@@ -37,7 +37,7 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main_activity);
-		extras = getIntent().getExtras();		
+		Intent intent3 = getIntent()		
 		//Log.e("url", extras.getString("macID"));
 		// Bind LifeService
 		Intent aIntent = new Intent(LifeService.class.getName());
