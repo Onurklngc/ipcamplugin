@@ -208,7 +208,7 @@ public class LifeService extends Service {
 		super.onDestroy();
 
 		this.release();
-		android.os.Process.killProcess(android.os.Process.myPid());
+		//android.os.Process.killProcess(android.os.Process.myPid());
 	}
 
 	public class loadBinder extends Binder {
