@@ -5,11 +5,7 @@ function Vitamio() {
 Vitamio.prototype.playVideo = function (url, options) {
 	options = options || {};
 	var handleSuccessCallback = function(playbackInfo) {
-		if (options.successCallback && playbackInfo.isDone) {
-			options.successCallback(playbackInfo);
-		} else if (options.progressCallback && !playbackInfo.isDone) {
-			options.progressCallback(playbackInfo);
-		}
+		DevExpress.ui.notify("Döndü", "info", 1000);
 	}
 	cordova.exec(handleSuccessCallback, options.errorCallback || null, "Vitamio", "playVideo", [url, options]);
 };
