@@ -52,6 +52,7 @@ public class MainActivity extends Activity {
 	public void onBackPressed() {
 		Intent intent2 = new Intent();
 		setResult(RESULT_OK, intent2);
+		
 		finish();
 	}
 	
