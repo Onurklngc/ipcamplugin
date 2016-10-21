@@ -122,6 +122,7 @@ public class LiveView extends SurfaceView implements SurfaceHolder.Callback {
 
 	@Override
 	public void surfaceCreated(SurfaceHolder holder) {
+		mDrawThread.setDrawing(true);
 		if (MainFrame.isDebug) Log.e(MainFrame.TAG, "surfaceCreated");
 	}
 
@@ -132,6 +133,7 @@ public class LiveView extends SurfaceView implements SurfaceHolder.Callback {
 
 	@Override
 	public void surfaceDestroyed(SurfaceHolder holder) {
+		mDrawThread.setDrawing(false);
 		if (MainFrame.isDebug) Log.e(MainFrame.TAG, "surfaceDestroyed");
 	}
 
@@ -146,7 +148,7 @@ public class LiveView extends SurfaceView implements SurfaceHolder.Callback {
 
 	private class DrawThread extends Thread {
 		private SurfaceHolder mHolder;
-		private boolean drawing;
+		private volatile boolean drawing;
 
 
 		public DrawThread(SurfaceHolder holder) {
