@@ -14,7 +14,7 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.os.Handler;
 
-import com.vestel.smarthomedemo.edimax.edilife.R;
+import io.cordova.hellocordova.R;
 import com.edimax.edilife.handle.DataParser;
 import com.edimax.edilife.ipcam.data.DeviceInfo;
 import com.edimax.edilife.service.LifeService;

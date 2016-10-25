@@ -21,7 +21,7 @@ import com.edimax.edilife.ipcam.data.DeviceInfo;
 import com.edimax.edilife.ipcam.page.MainFrame;
 import com.edimax.edilife.service.LifeService;
 
-import com.vestel.smarthomedemo.edimax.edilife.R;
+import io.cordova.hellocordova.R;
 
 /**
  * Created by Gregory on 2016/1/27.
@@ -31,24 +31,19 @@ public class MainActivity extends Activity {
 	private LifeService mSrvAPI;
 	private FrameLayout mLayRoot;
 	private MainFrame   mMainFrame;
-	private Bundle extras;
+	Bundle extras;
 	private String  macID= new String();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main_activity);
-		Intent intent3 = getIntent();
-		String action = intent3.getAction();
-		String type = intent3.getType();
+		Bundle extras = getIntent().getExtras();
 
-		if (Intent.ACTION_PLAY_VIDEO.equals(action) && type != null) {
-			if ("text/plain".equals(type)) {
-				handleSendText(intent3); // Handle text being sent
-			}
+		if (extras != null) {
+			macID = extras.getString("macID");
 		}
-		
-		Log.e("url", extras.getString("macID"));
+		Log.e("url", macID);
 		
 		if(macID.length()!=12){
 			macID="74da383c482d";
@@ -62,15 +57,6 @@ public class MainActivity extends Activity {
 
 		mLayRoot = (FrameLayout)findViewById(R.id.lay_root);
 	}
-	
-	
-	public void handleSendText(Intent intent) {
-		String sharedText = intent.getStringExtra(Intent.EXTRA_TEXT);
-		if (sharedText != null) {
-			macID = intent.getStringExtra(Intent.EXTRA_TEXT);
-		}
-	}
-	
 	
 	
 	@Override
