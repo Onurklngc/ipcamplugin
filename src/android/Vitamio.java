@@ -56,15 +56,15 @@ public class Vitamio extends CordovaPlugin {
 		this.cordova.startActivityForResult((CordovaPlugin) this,i, 0);
 		return true;
 	}
-	private boolean playVideo(String url, JSONObject options) throws JSONException {
+	private boolean playVideo(final String url, JSONObject options) throws JSONException {
 		final CordovaInterface cordovaObj = cordova;
 		final CordovaPlugin plugin = this;
 		cordova.getActivity().runOnUiThread(new Runnable() {
 			public void run() {
-				Intent i = new Intent("ACTION_PLAY_VIDEO");				
+				Context context = cordova.getActivity().getApplicationContext();
+				Intent i = new Intent(context,MainActivity.class);				
 				i.putExtra("macID", url);
-				i.setType("text/plain");
-				cordovaObj.startActivityForResult(plugin,i, 0);
+				cordova.getActivity().startActivity(i);
 			}
 		});
 		return true;
