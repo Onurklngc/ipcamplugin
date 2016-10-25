@@ -32,6 +32,7 @@ public class MainActivity extends Activity {
 	private FrameLayout mLayRoot;
 	private MainFrame   mMainFrame;
 	private Bundle extras;
+	private String  macID;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +40,11 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.main_activity);
 		//Intent intent3 = getIntent();		
 		//Log.e("url", extras.getString("macID"));
+		
+		if(macID.length()!=12){
+			macID="74da383c482d";
+		}
+		
 		// Bind LifeService
 		Intent aIntent = new Intent(LifeService.class.getName());
 		aIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -79,7 +85,7 @@ public class MainActivity extends Activity {
 
 	private void addFrame() {
 		mLayRoot.removeAllViewsInLayout();
-		mMainFrame = new MainFrame(this, mSrvAPI);
+		mMainFrame = new MainFrame(this, mSrvAPI, macID);
 		mLayRoot.addView(mMainFrame);
 	}
 

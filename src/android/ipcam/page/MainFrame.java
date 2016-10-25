@@ -83,23 +83,23 @@ public class MainFrame extends FrameLayout
 	private LifeService mSrvAPI;
 	private Handler mHandler;
 
-	public MainFrame(Activity activity, LifeService service) {
+	public MainFrame(Activity activity, LifeService service, String MacAdress) {
 		super(activity);
 		this.mActivity  = activity;
 		this.mSrvAPI    = service;
+		initData(String MacAdress);
 		init();
 	}
 
 	private void init() {
 		mHandler = new Handler(this);
-		initData();
 		findView();
 		mSrvAPI.setLifeCallbackListener(this);
 		doConnect(mMode);
 	}
 
-	private void initData() {
-		mDUID   = MAC_3140;
+	private void initData(String MacAdress) {
+		mDUID   = MacAdress;
 		mMAC    = MAC_3140;
 		mMode   = TYPE_MAC;
 	}
