@@ -103,6 +103,10 @@ public class MainFrame extends FrameLayout
 		mMAC    = MAC_3140;
 		mMode   = TYPE_MAC;
 	}
+	
+	public void getmUID() {
+		return mDUID;
+	}
 
 	private void findView() {
 		LayoutInflater.from(getContext()).inflate(R.layout.main_frame, this, true);

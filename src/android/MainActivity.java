@@ -53,7 +53,7 @@ public class MainActivity extends Activity {
 		Intent intent2 = new Intent();
 		setResult(RESULT_OK, intent2);
 		if (mSrvAPI != null&& mMainFrame != null) {
-			mSrvAPI.stopRTSP(mMainFrame.mDUID);
+			mSrvAPI.stopRTSP(mMainFrame.getmUID());
 		}
 		finish();
 	}
@@ -88,7 +88,7 @@ public class MainActivity extends Activity {
 		// Device disconnected
 		if (mSrvAPI != null) {
 			if (mMainFrame != null) {
-			mSrvAPI.disconnect(mMainFrame.mDUID);
+			mSrvAPI.disconnect(mMainFrame.getmUID());
 			}
 			mSrvAPI.release();
 		}	
