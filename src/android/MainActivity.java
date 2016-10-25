@@ -32,7 +32,7 @@ public class MainActivity extends Activity {
 	private FrameLayout mLayRoot;
 	private MainFrame   mMainFrame;
 	private Bundle extras;
-	private String  macID;
+	private String  macID= new String();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
