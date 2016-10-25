@@ -87,7 +87,7 @@ public class MainFrame extends FrameLayout
 		super(activity);
 		this.mActivity  = activity;
 		this.mSrvAPI    = service;
-		initData(String MacAdress);
+		initData(MacAdress);
 		init();
 	}
 
@@ -100,7 +100,7 @@ public class MainFrame extends FrameLayout
 
 	private void initData(String MacAdress) {
 		mDUID   = MacAdress;
-		mMAC    = MAC_3140;
+		mMAC    = MacAdress;
 		mMode   = TYPE_MAC;
 	}
 	
