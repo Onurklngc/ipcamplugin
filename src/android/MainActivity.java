@@ -21,7 +21,7 @@ import com.edimax.edilife.ipcam.data.DeviceInfo;
 import com.edimax.edilife.ipcam.page.MainFrame;
 import com.edimax.edilife.service.LifeService;
 
-import com.devexpress.apptemplate.R;
+import com.vestel.smarthomedemo.edimax.edilife.R;
 
 /**
  * Created by Gregory on 2016/1/27.
@@ -65,9 +65,9 @@ public class MainActivity extends Activity {
 	
 	
 	public void handleSendText(Intent intent) {
-		String sharedText = intent.getStringExtra(Intent.macID);
+		String sharedText = intent.getStringExtra(Intent.EXTRA_TEXT);
 		if (sharedText != null) {
-			macID = intent.getStringExtra(Intent.macID);
+			macID = intent.getStringExtra(Intent.EXTRA_TEXT);
 		}
 	}
 	
