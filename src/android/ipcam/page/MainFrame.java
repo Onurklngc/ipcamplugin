@@ -104,7 +104,7 @@ public class MainFrame extends FrameLayout
 		mMode   = TYPE_MAC;
 	}
 	
-	public void getmUID() {
+	public String getmUID() {
 		return mDUID;
 	}
 
