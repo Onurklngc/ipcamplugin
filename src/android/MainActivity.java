@@ -46,6 +46,8 @@ public class MainActivity extends Activity {
 			if ("text/plain".equals(type)) {
 				handleSendText(intent3); // Handle text being sent
 			}
+		}
+		
 		void handleSendText(Intent intent) {
 			String sharedText = intent.getStringExtra(Intent.macID);
 			if (sharedText != null) {
