@@ -52,7 +52,9 @@ public class MainActivity extends Activity {
 	public void onBackPressed() {
 		Intent intent2 = new Intent();
 		setResult(RESULT_OK, intent2);
-		
+		if (mSrvAPI != null&& mMainFrame != null) {
+			mSrvAPI.stopRTSP(mMainFrame.mDUID);
+		}
 		finish();
 	}
 	
@@ -84,7 +86,12 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onDestroy() {
 		// Device disconnected
-		mSrvAPI.disconnect(MainFrame.MAC_5150);
+		if (mSrvAPI != null) {
+			if (mMainFrame != null) {
+			mSrvAPI.disconnect(mMainFrame.mDUID);
+			}
+			mSrvAPI.release();
+		}	
 		// Unbind
 		unbindService(m_SrvConnection);
 		// Clear DeviceInfo
