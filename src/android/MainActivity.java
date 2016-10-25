@@ -38,8 +38,22 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main_activity);
-		//Intent intent3 = getIntent();		
-		//Log.e("url", extras.getString("macID"));
+		Intent intent3 = getIntent();
+		String action = intent3.getAction();
+		String type = intent3.getType();
+
+		if (Intent.ACTION_PLAY_VIDEO.equals(action) && type != null) {
+			if ("text/plain".equals(type)) {
+				handleSendText(intent3); // Handle text being sent
+			}
+		void handleSendText(Intent intent) {
+			String sharedText = intent.getStringExtra(Intent.macID);
+			if (sharedText != null) {
+				macID = intent.getStringExtra(Intent.macID);
+			}
+		}
+		
+		Log.e("url", extras.getString("macID"));
 		
 		if(macID.length()!=12){
 			macID="74da383c482d";
