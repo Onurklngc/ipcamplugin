@@ -48,13 +48,6 @@ public class MainActivity extends Activity {
 			}
 		}
 		
-		void handleSendText(Intent intent) {
-			String sharedText = intent.getStringExtra(Intent.macID);
-			if (sharedText != null) {
-				macID = intent.getStringExtra(Intent.macID);
-			}
-		}
-		
 		Log.e("url", extras.getString("macID"));
 		
 		if(macID.length()!=12){
@@ -69,6 +62,16 @@ public class MainActivity extends Activity {
 
 		mLayRoot = (FrameLayout)findViewById(R.id.lay_root);
 	}
+	
+	
+	public void handleSendText(Intent intent) {
+		String sharedText = intent.getStringExtra(Intent.macID);
+		if (sharedText != null) {
+			macID = intent.getStringExtra(Intent.macID);
+		}
+	}
+	
+	
 	
 	@Override
 	public void onBackPressed() {
