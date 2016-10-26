@@ -78,5 +78,6 @@
 		<source-file src="src/android/libs/armeabi/libLifeAPI.so" target-dir="libs/armeabi" />
 		<source-file src="src/android/res/layout/main_activity.xml" target-dir="res/layout"/>
 		<source-file src="src/android/res/layout/main_frame.xml" target-dir="res/layout"/>
+		<hook type="after_plugin_install" src="hooks/hook-add-r-import.js" />
 	</platform>
 </plugin>

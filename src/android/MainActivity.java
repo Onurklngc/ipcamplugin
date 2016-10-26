@@ -21,7 +21,6 @@ import com.edimax.edilife.ipcam.data.DeviceInfo;
 import com.edimax.edilife.ipcam.page.MainFrame;
 import com.edimax.edilife.service.LifeService;
 
-import io.cordova.hellocordova.R;
 
 /**
  * Created by Gregory on 2016/1/27.
