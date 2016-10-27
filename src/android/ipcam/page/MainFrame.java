@@ -19,6 +19,8 @@ import com.edimax.edilife.handle.DataParser;
 import com.edimax.edilife.ipcam.data.DeviceInfo;
 import com.edimax.edilife.service.LifeService;
 
+import com.devexpress.apptemplate.R;
+
 import java.nio.ByteBuffer;
 
 /**
