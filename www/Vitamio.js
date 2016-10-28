@@ -2,7 +2,7 @@
 function Vitamio() {
 }
 
-Vitamio.prototype.playVideo = function (url, options) {
+Vitamio.prototype.playVideoSDK = function (url, options) {
 	options = options || {};
 	var handleSuccessCallback = function(playbackInfo) {
 		DevExpress.ui.notify("Döndü", "info", 1000);
