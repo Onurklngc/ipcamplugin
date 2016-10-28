@@ -1,16 +1,16 @@
 "use strict";
-function Vitamio() {
+function Edimax() {
 }
 
-Vitamio.prototype.playVideoSDK = function (url, options) {
+Edimax.prototype.playVideoSDK = function (url, options) {
 	options = options || {};
 	var handleSuccessCallback = function(playbackInfo) {
 		DevExpress.ui.notify("Döndü", "info", 1000);
 	}
-	cordova.exec(handleSuccessCallback, options.errorCallback || null, "Vitamio", "playVideo", [url, options]);
+	cordova.exec(handleSuccessCallback, options.errorCallback || null, "Edimax", "playVideo", [url, options]);
 };
 
-Vitamio.prototype.playAudio = function (url, options) {
+Edimax.prototype.playAudio = function (url, options) {
 	options = options || {};
 	var handleSuccessCallback = function(playbackInfo) {
 		if (options.successCallback && playbackInfo.isDone) {
@@ -19,15 +19,15 @@ Vitamio.prototype.playAudio = function (url, options) {
 			options.progressCallback(playbackInfo);
 		}
 	}
-	cordova.exec(handleSuccessCallback, options.errorCallback || null, "Vitamio", "playVideo", [url, options]);
+	cordova.exec(handleSuccessCallback, options.errorCallback || null, "Edimax", "playVideo", [url, options]);
 };
 
-Vitamio.install = function () {
+Edimax.install = function () {
 	if (!window.plugins) {
 		window.plugins = {};
 	}
-	window.plugins.edimax = new Vitamio();
+	window.plugins.edimax = new Edimax();
 	return window.plugins.edimax;
 };
 
-cordova.addConstructor(Vitamio.install);
+cordova.addConstructor(Edimax.install);

@@ -19,7 +19,7 @@ import org.apache.cordova.CordovaInterface;
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.PluginResult;
 
-public class Vitamio extends CordovaPlugin {
+public class Edimax extends CordovaPlugin {
 	public static final String ACTION_PLAY_AUDIO = "playAudio";
 	public static final String ACTION_PLAY_VIDEO = "playVideo";
 
@@ -28,7 +28,7 @@ public class Vitamio extends CordovaPlugin {
 	private CallbackContext callbackContext;
 	private BroadcastReceiver receiver;
 
-	private static final String TAG = "VitamioPlugin";
+	private static final String TAG = "EdimaxPlugin";
 
 	@Override
 	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
@@ -46,7 +46,7 @@ public class Vitamio extends CordovaPlugin {
 		} else if (ACTION_PLAY_VIDEO.equals(action)) {
 			return playVideo(args.getString(0), options);
 		} else {
-			callbackContext.error("vitamio." + action + " is not a supported method.");
+			callbackContext.error("Edimax." + action + " is not a supported method.");
 			return false;
 		}
 	}

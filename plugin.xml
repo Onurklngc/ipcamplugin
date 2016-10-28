@@ -3,23 +3,23 @@
 		xmlns="http://apache.org/cordova/ns/plugins/1.0"
 		xmlns:android="http://schemas.android.com/apk/res/android"
 		id="com.edimax.edilife"
-		version="0.0.2">
+		version="0.0.3">
 
-	<name>Vitamio</name>
+	<name>Edimax</name>
 
 	<engines>
 		<engine name="cordova" version=">=3.0.0" />
 	</engines>
 
-	<js-module src="www/Vitamio.js" name="Vitamio">
-		<clobbers target="vitamio" />
+	<js-module src="www/Edimax.js" name="Edimax">
+		<clobbers target="Edimax" />
 	</js-module>
 
 	<!-- android -->
 	<platform name="android">
 		<config-file target="res/xml/config.xml" parent="/*">
-			<feature name="Vitamio">
-				<param name="android-package" value="com.edimax.edilife.Vitamio" />
+			<feature name="Edimax">
+				<param name="android-package" value="com.edimax.edilife.Edimax" />
 			</feature>
 		</config-file>
 		<config-file target="AndroidManifest.xml" parent="/manifest">
@@ -67,7 +67,7 @@
 			<string name="sd">SD</string>
 			<string name="smooth">SMOOTH</string>
 		</config-file>
-		<source-file src="src/android/Vitamio.java" target-dir="src/com/edimax/edilife" />
+		<source-file src="src/android/Edimax.java" target-dir="src/com/edimax/edilife" />
 		<source-file src="src/android/MainActivity.java" target-dir="src/com/edimax/edilife" />
 		<source-file src="src/android/ipcam/page/MainFrame.java" target-dir="src/com/edimax/edilife" />
 		<source-file src="src/android/ipcam/page/LiveView.java" target-dir="src/com/edimax/edilife" />
