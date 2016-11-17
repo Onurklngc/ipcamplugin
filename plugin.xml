@@ -75,7 +75,7 @@
 		<source-file src="src/android/ipcam/data/DeviceInfo.java" target-dir="src/com/edimax/edilife" />
 		<source-file src="src/android/handle/DataParser.java" target-dir="src/com/edimax/edilife" />
 		<source-file src="src/android/libs/armeabi/libffmpeg.so" target-dir="libs/armeabi" />
-		<source-file src="src/android/libs/armeabi/libLifeAPI.so" target-dir="libs/armeabi" />
+		<source-file src="src/android/libs/armeabi/libLifeAPI.so" target-dir="libs/armeabi-v7a" />
 		<source-file src="src/android/res/layout/main_activity.xml" target-dir="res/layout"/>
 		<source-file src="src/android/res/layout/main_frame.xml" target-dir="res/layout"/>
 		<hook type="after_plugin_install" src="hooks/hook-add-r-import.js" />
